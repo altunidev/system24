@@ -224,3 +224,4 @@ a-pr { color: var(--red-3); }		/* variables */
 a-o { color: var(--text-2); }		/* operators ($, |, etc.) */
 a-eb { color: var(--text-3); } 		/* command substitutions */
 a-co { color: var(--yellow-3); }	/* command options */
+a-p { color: var(--text-4); }
