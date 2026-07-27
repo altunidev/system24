@@ -99,7 +99,7 @@ body {
     --bg-2: oklch(27% 0 0); /* dark buttons */
     --bg-3: oklch(23% 0 0); /* spacing, secondary elements */
     --bg-4: oklch(19% 0 0); /* main background color */
-	/*--bg-4: hsla(220, 15%, 10%, 0.7);	/* main background colour but transparent */
+	/*--bg-4: hsla(220, 15%, 10%, 0.7);	*//* main background colour but transparent */
     --hover: oklch(54% 0 0 / 0.1); /* channels and buttons when hovered */
     --active: oklch(54% 0 0 / 0.2); /* channels and buttons when clicked or selected */
     --active-2: oklch(54% 0 0 / 0.3); /* extra state for transparent buttons */
@@ -179,9 +179,9 @@ body {
         --bg-1: oklch(82% 0 0);
         --bg-2: oklch(86% 0 0);
         --bg-3: oklch(90% 0 0);
-		--bg-3: hsla(220, 15%, 94%, 0);
+		/*--bg-3: hsla(220, 15%, 94%, 0);*/
         --bg-4: oklch(94% 0 0); /* main background colour but bright */
-		/*--bg-4: hsla(220, 15%, 94%, 0.7); /* main background colour but bright and transparent */
+		/*--bg-4: hsla(220, 15%, 94%, 0.7); *//* main background colour but bright and transparent */
         --hover: oklch(50% 0 0 / 0.1);
         --active: oklch(50% 0 0 / 0.2);
         --active-2: oklch(50% 0 0 / 0.3);
@@ -224,4 +224,3 @@ a-pr { color: var(--red-3); }		/* variables */
 a-o { color: var(--text-2); }		/* operators ($, |, etc.) */
 a-eb { color: var(--text-3); } 		/* command substitutions */
 a-co { color: var(--yellow-3); }	/* command options */
-
