@@ -1,8 +1,8 @@
 /**
  * @name system24 (auto)
  * @description a tui-style discord theme that follows your system color scheme.
- * @author refact0r
- * @version 2.0.0
+ * @author refact0r & Salty
+ * @version 2.0.1
  * @invite nz87hXyvcy
  * @website https://github.com/refact0r/system24
  * @source https://github.com/refact0r/system24/blob/master/theme/flavors/system24-auto.theme.css
@@ -38,7 +38,7 @@ body {
     --subtle-top-bar-title: off; /* off: default, on: hide the icon and use subtle text color (like old discord) */
 
     /* window controls */
-    --custom-window-controls: off; /* off: default window controls, on: custom window controls */
+    --custom-window-controls: on; /* off: default window controls, on: custom window controls */
     --window-control-size: 14px; /* size of custom window controls */
 
     /* dms button options */
@@ -99,6 +99,7 @@ body {
     --bg-2: oklch(27% 0 0); /* dark buttons */
     --bg-3: oklch(23% 0 0); /* spacing, secondary elements */
     --bg-4: oklch(19% 0 0); /* main background color */
+	/*--bg-4: hsla(220, 15%, 10%, 0.7);	/* main background colour but transparent */
     --hover: oklch(54% 0 0 / 0.1); /* channels and buttons when hovered */
     --active: oklch(54% 0 0 / 0.2); /* channels and buttons when clicked or selected */
     --active-2: oklch(54% 0 0 / 0.3); /* extra state for transparent buttons */
@@ -178,7 +179,9 @@ body {
         --bg-1: oklch(82% 0 0);
         --bg-2: oklch(86% 0 0);
         --bg-3: oklch(90% 0 0);
-        --bg-4: oklch(94% 0 0);
+		--bg-3: hsla(220, 15%, 94%, 0);
+        --bg-4: oklch(94% 0 0); /* main background colour but bright */
+		/*--bg-4: hsla(220, 15%, 94%, 0.7); /* main background colour but bright and transparent */
         --hover: oklch(50% 0 0 / 0.1);
         --active: oklch(50% 0 0 / 0.2);
         --active-2: oklch(50% 0 0 / 0.3);
@@ -212,8 +215,8 @@ img[src*="avatars"],
 .hljs,
 .hljs span,
 pre code,
-code { color: var(--text-3); }      /* plain text / comments / shebang */
-a-c { color: var(--text-3); }		
+code { color: var(--text-3); }
+a-c { color: var(--text-3); }		/* plain text / comments / shebang */
 a-k { color: var(--purple-3); }		/* keywords */
 a-f { color: var(--blue-3); }		/* commands/functions */
 a-s { color: var(--green-3); }		/* strings */
@@ -221,3 +224,4 @@ a-pr { color: var(--red-3); }		/* variables */
 a-o { color: var(--text-2); }		/* operators ($, |, etc.) */
 a-eb { color: var(--text-3); } 		/* command substitutions */
 a-co { color: var(--yellow-3); }	/* command options */
+
