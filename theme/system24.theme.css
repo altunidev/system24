@@ -2,7 +2,7 @@
  * @name system24 (auto)
  * @description a tui-style discord theme that follows your system color scheme.
  * @author refact0r & Salty
- * @version 2.0.1
+ * @version 2.0.2
  * @invite nz87hXyvcy
  * @website https://github.com/refact0r/system24
  * @source https://github.com/refact0r/system24/blob/master/theme/flavors/system24-auto.theme.css
@@ -213,6 +213,11 @@ body {
     }
 }
 
+
+
+
+
+
 /* Plain text in code blocks */
 .hljs,
 .hljs span,
@@ -228,23 +233,27 @@ a-eb { color: var(--text-3); } 		/* command substitutions */
 a-co { color: var(--yellow-3); }	/* command options */
 a-p { color: var(--text-4); }
 
-/* Unrounded UI, but keep avatars/icons unaffected */
 
+/* =============================================== */
+/* Unrounded UI, but keep avatars/icons unaffected */
+/* =============================================== */
 :is(
     .visual-refresh,
     #app-mount
 ) *:not(
-    img,
-    svg,
-    foreignObject,
-    mask,
-    [class*="avatar"],
-    [class*="wrapper__44b0c"],
-    [class*="status"],
-    [class*="icon"],
-    [class*="emoji"],
-    [class*="guildIcon"],
-    [class*="userAvatar"]
+    img
+    , svg
+    , foreignObject
+    , mask
+    , [class*="avatar"]
+    , [class*="wrapper__44b0c"]
+    , [class*="status"]
+    , [class*="icon"]
+    , [class*="emoji"]
+    , [class*="guildIcon"]
+    , [class*="userAvatar"]
+	, [class*="numberBadge"]
+	, [class*="baseShapeRound"]
 ) {
     border-radius: 0 !important;
 }
@@ -258,6 +267,10 @@ a-p { color: var(--text-4); }
     --radius-xl: 0px;
     --radius-xxl: 0px;
 }
+
+/* Make settings switches square */
+.switchIndicator_a28278 { border-radius: 0; }
+.thumb_a28278, .thumb_a28278 rect { rx: 0; }
 
 /* Square folder masks only */
 .wrapper_cc5dd2:has(.folderButtonInner__48112) svg mask use,
