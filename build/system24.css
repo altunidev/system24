@@ -363,7 +363,6 @@ body {
         --radius-round: 0px !important;
     }
 
-    /*
     .svg_cc5dd2 > mask,
     .svg__44b0c > rect,
     .svg__44b0c > circle,
@@ -372,15 +371,13 @@ body {
     .avatar__20a53 .status_a423bd {
         display: none;
     }
-    */
-    
+
     .mask__68edb > foreignObject,
     .svg__44b0c > foreignObject,
     .svg__2338f > foreignObject {
         mask: none;
     }
 
-    /*
     .wrapper__44b0c,
     .container__1ce5d {
         --online-2: #43a25a;
@@ -389,7 +386,6 @@ body {
         --offline-2: #82838b;
         --streaming-2: #9147ff;
     }
-    
     .wrapper__44b0c:has(rect)::after,
     .container__1ce5d:has(.status_a423bd)::after {
         content: '';
@@ -401,26 +397,6 @@ body {
         right: -4px;
         border: 2px solid var(--background-base-lower);
     }
-    */
-
-    /* Restore Discord's original status icons */
-    @container body style(--unrounding: on) {
-        /* Show the original SVG status */
-        .svg__44b0c > rect,
-        .svg__44b0c > circle,
-        .svg__44b0c > g,
-        .avatar__20a53 .status_a423bd {
-            display: revert !important;
-        }
-    
-        /* Remove system24's replacement square */
-        .wrapper__44b0c::after,
-        .container__1ce5d::after {
-            content: none !important;
-            display: none !important;
-        }
-    }
-    
     .wrapper__44b0c:has(rect[fill='#45a366'])::after,
     .container__1ce5d:has(.status_a423bd[style='background-color: rgb(69, 163, 102);'])::after {
         background: var(--online-2) !important;
@@ -473,16 +449,9 @@ body {
         width: 12px !important;
     }
 
-    /* prevent the status circle background mask from blocking avatar decorations in profile popouts *//*
+    /* prevent the status circle background mask from blocking avatar decorations in profile popouts */
     .wrapper__44b0c foreignObject {
         mask: none;
-    }*/
-    @container body style(--unrounding: on) {
-        .wrapper__44b0c foreignObject,
-        .svg__44b0c > foreignObject {
-            mask: revert !important;
-            -webkit-mask: revert !important;
-        }
     }
 
     /* equicord switches */
@@ -526,4 +495,3 @@ body {
         border-color: var(--checkbox-border-selected-default);
     }
 }
-
