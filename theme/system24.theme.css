@@ -11,7 +11,7 @@
 */
 
 /* import theme modules */
-@import url('https://refact0r.github.io/system24/build/system24.css');
+@import url('https://raw.githubusercontent.com/altunidev/system24/refs/heads/main/build/system24.css');
 
 body {
     /* font, change to '' for default discord font */
@@ -68,7 +68,7 @@ body {
     --small-user-panel: on; /* off: default user panel, on: smaller user panel like in old discord */
 
     /* unrounding options */
-    --unrounding: on; /* off: default, on: remove rounded corners from panels */
+    --unrounding: off; /* off: default, on: remove rounded corners from panels */
 
     /* styling options */
     --custom-spotify-bar: on; /* off: default, on: custom text-like spotify progress bar */
@@ -201,14 +201,16 @@ body {
         --idle: var(--yellow-3);
         --streaming: var(--purple-3);
         --offline: var(--text-5);
+		--interactive-normal: oklch(40% 0 0);
+		
+		/* ensure light mode is applied on voice / streaming server icons */
+		.voiceSectionIconWrapper__00943 {
+			background-color: var(--bg-4);
+		}
+		.iconBadge__463b7 {
+			background-color: var(--background-base-low);
+		}
     }
-}
-
-/* Restore only user profile pictures to circles */
-img[src*="avatars"],
-[class*="avatar"][class*="wrapper"] {
-    border-radius: 50% !important;
-    overflow: hidden;
 }
 
 /* Plain text in code blocks */
@@ -225,3 +227,45 @@ a-o { color: var(--text-2); }		/* operators ($, |, etc.) */
 a-eb { color: var(--text-3); } 		/* command substitutions */
 a-co { color: var(--yellow-3); }	/* command options */
 a-p { color: var(--text-4); }
+
+/* Unrounded UI, but keep avatars/icons unaffected */
+
+:is(
+    .visual-refresh,
+    #app-mount
+) *:not(
+    img,
+    svg,
+    foreignObject,
+    mask,
+    [class*="avatar"],
+    [class*="wrapper__44b0c"],
+    [class*="status"],
+    [class*="icon"],
+    [class*="emoji"],
+    [class*="guildIcon"],
+    [class*="userAvatar"]
+) {
+    border-radius: 0 !important;
+}
+
+/* Discord radius variables */
+:root {
+    --radius-xs: 0px;
+    --radius-sm: 0px;
+    --radius-md: 0px;
+    --radius-lg: 0px;
+    --radius-xl: 0px;
+    --radius-xxl: 0px;
+}
+
+/* Square folder masks only */
+.wrapper_cc5dd2:has(.folderButtonInner__48112) svg mask use,
+.wrapper_cc5dd2:has(.folderButtonInner__48112) svg defs path {
+    d: path("M0 0H48V48H0Z");
+}
+
+/* Or just remove the mask entirely from folders */
+.wrapper_cc5dd2:has(.folderButtonInner__48112) foreignObject {
+    mask: none !important;
+}
