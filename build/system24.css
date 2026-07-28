@@ -477,6 +477,13 @@ body {
     .wrapper__44b0c foreignObject {
         mask: none;
     }*/
+    @container body style(--unrounding: on) {
+        .wrapper__44b0c foreignObject,
+        .svg__44b0c > foreignObject {
+            mask: revert !important;
+            -webkit-mask: revert !important;
+        }
+    }
 
     /* equicord switches */
     .vc-switch-indicator .vc-switch-thumb rect {
