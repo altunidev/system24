@@ -363,20 +363,21 @@ body {
         --radius-round: 0px !important;
     }
 
-    /* .svg_cc5dd2 > mask,
+    /*
+    .svg_cc5dd2 > mask,
     .svg__44b0c > rect,
     .svg__44b0c > circle,
     .svg__44b0c > g,
     .svg__44b0c rect[mask='url(#:rhi:)'],
     .avatar__20a53 .status_a423bd {
         display: none;
-    } */
+    }
 
-    /* .mask__68edb > foreignObject,
+    .mask__68edb > foreignObject,
     .svg__44b0c > foreignObject,
     .svg__2338f > foreignObject {
         mask: none;
-    } */
+    }
 
     .wrapper__44b0c,
     .container__1ce5d {
@@ -386,7 +387,7 @@ body {
         --offline-2: #82838b;
         --streaming-2: #9147ff;
     }
-    /* .wrapper__44b0c:has(rect)::after,
+    .wrapper__44b0c:has(rect)::after,
     .container__1ce5d:has(.status_a423bd)::after {
         content: '';
         display: block;
@@ -396,8 +397,8 @@ body {
         bottom: -4px;
         right: -4px;
         border: 2px solid var(--background-base-lower);
-    } */
-    /*
+    } 
+    
     .wrapper__44b0c:has(rect[fill='#45a366'])::after,
     .container__1ce5d:has(.status_a423bd[style='background-color: rgb(69, 163, 102);'])::after {
         background: var(--online-2) !important;
@@ -413,7 +414,7 @@ body {
     }
     .wrapper__44b0c:has(rect[fill='#9147ff'])::after {
         background: var(--streaming-2);
-    }*/
+    }
 
     .lowerBadge_cc5dd2 {
         border: 2px solid var(--background-base-lower);
