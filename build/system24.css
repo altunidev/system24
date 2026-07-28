@@ -520,14 +520,13 @@ body {
         display: none;
     }
     
-    /*
     .mask__68edb > foreignObject,
     .svg__44b0c > foreignObject,
     .svg__2338f > foreignObject {
         mask: none;
     }
 
-    
+    /*
     .wrapper__44b0c,
     .container__1ce5d {
         --online-2: #43a25a;
@@ -620,10 +619,10 @@ body {
         width: 12px !important;
     }
 
-    /* prevent the status circle background mask from blocking avatar decorations in profile popouts */
+    /* prevent the status circle background mask from blocking avatar decorations in profile popouts *//*
     .wrapper__44b0c foreignObject {
         mask: none;
-    }
+    }*/
 
     /* equicord switches */
     .vc-switch-indicator .vc-switch-thumb rect {
