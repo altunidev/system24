@@ -452,9 +452,9 @@ body {
     }
 
     /* prevent the status circle background mask from blocking avatar decorations in profile popouts */
-    .wrapper__44b0c foreignObject {
+    /* .wrapper__44b0c foreignObject {
         mask: none;
-    }
+    } */
 
     /* equicord switches */
     .vc-switch-indicator .vc-switch-thumb rect {
