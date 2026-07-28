@@ -160,6 +160,17 @@ body {
     --purple-3: oklch(65% 0.12 310);
     --purple-4: oklch(60% 0.12 310);
     --purple-5: oklch(55% 0.12 310);
+	
+	/* unround badge fix */
+	.numberBadge__463b7 {
+		color: var(--text-1) !important;
+	}
+
+	@media (prefers-color-scheme: light) {
+		.numberBadge__463b7 {
+			color: var(--text-1) !important;
+		}
+	}
 }
 
 /* light color options */
