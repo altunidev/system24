@@ -171,6 +171,14 @@ body {
 			color: var(--text-1) !important;
 		}
 	}
+	
+	/* Direct override for Discord typing dots inside the SVG */
+	.dots__5ad89 circle,
+	svg.dots__5ad89 g circle {
+		fill: #ffffff !important;
+		color: #ffffff !important;
+		/*opacity: 1 !important; /* Overrides inline low opacity styles if needed */
+	}
 }
 
 /* light color options */
@@ -290,11 +298,3 @@ a-p { color: var(--text-4); }
     mask: none !important;
 }
 
-
-/* Direct override for Discord typing dots inside the SVG */
-.dots__5ad89 circle,
-svg.dots__5ad89 g circle {
-    fill: #ffffff !important;
-    color: #ffffff !important;
-    /*opacity: 1 !important; /* Overrides inline low opacity styles if needed */
-}
