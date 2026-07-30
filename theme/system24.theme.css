@@ -225,10 +225,6 @@ body {
 }
 
 
-
-
-
-
 /* Plain text in code blocks */
 .hljs,
 .hljs span,
@@ -292,4 +288,13 @@ a-p { color: var(--text-4); }
 /* Or just remove the mask entirely from folders */
 .wrapper_cc5dd2:has(.folderButtonInner__48112) foreignObject {
     mask: none !important;
+}
+
+
+/* Direct override for Discord typing dots inside the SVG */
+.dots__5ad89 circle,
+svg.dots__5ad89 g circle {
+    fill: #ffffff !important;
+    color: #ffffff !important;
+    /*opacity: 1 !important; /* Overrides inline low opacity styles if needed */
 }
